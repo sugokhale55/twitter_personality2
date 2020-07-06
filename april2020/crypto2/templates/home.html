@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	
+<!--{{api2.ETH.USD}} -->
+
+<ul>
+	<div class="jumbotron">
+
+		<!--{% for y in api2.ETH %}  ETH: {{api2.ETH.USD}} BTC: {{api2.BTC.USD}} -->
+  <h1 class="display-4"> {{apitx1.unconfirmed.count}}</h1>
+  <p class="lead">lllllheyyyyyyyyyyyThis is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  
+ 
+  <a class="btn btn-primary btn" href="#" role="button">Learn more</a>
+  {% endfor %}
+</div>
+<div class ="container">
+	<div class = "row">
+		{% for y in apitx44.transactions %} 
+
+		<div class ="col-sm">
+	<div class="card" style="width: 18rem;">
+ 
+  <div class="card-body">
+    <h5 class="card-title">{{y.size}}</h5>
+    <p class="card-text">{{y.txid}}</p>
+   
+  </div>
+</div>
+<br/>
+</div>
+{% endfor %}
+
+
+{% for x in api.Data %} 
+    <div class ="col-sm">
+  <div class="card" style="width: 18rem;">
+  <img src={{x.imageurl}} class="card-img-top" alt={{x.source}}>
+  <div class="card-body">
+    <h5 class="card-title">{{x.title}}</h5>
+    <p class="card-text">{{x.body}}</p>
+    <a href={{x.url}} class="btn btn-secondary">Read More</a>
+  </div>
+</div>
+<br/>
+</div>
+{% endfor %}
+
+
+
+
+
+
+
+</div>
+</div>
+<!-- <li>{{x.title}}</li> -->
+
+
+	
+</ul>
+
+{% endblock %}
+
+
+
